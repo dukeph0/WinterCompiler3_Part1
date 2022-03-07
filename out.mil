@@ -1,0 +1,14 @@
+func main
+. i
+= i, 0
+. __temp__0
+<= __temp__0, i, 10
+: beginloop0
+.> i
+. __temp__1
+> __temp__1, i, 3
+. __temp__2
++ __temp__2, i, 1
+= i, __temp__2
+endfunc
+
