@@ -1,14 +1,60 @@
 func main
+. n
+.[] a, 1000
 . i
-= i, 0
+. j
+. x
+. sqrt_n
+= x, n
 . __temp__0
-<= __temp__0, i, 10
-: beginloop0
-.> i
+/ __temp__0, n, x
 . __temp__1
-> __temp__1, i, 3
+> __temp__1, x, __temp__0
+: beginloop0
 . __temp__2
-+ __temp__2, i, 1
-= i, __temp__2
+/ __temp__2, n, x
+. __temp__3
++ __temp__3, x, __temp__2
+. __temp__4
+/ __temp__4, x, 2
+= x, __temp__4
+= sqrt_n, x
+= i, 2
+. __temp__5
+<= __temp__5, i, n
+: beginloop1
+[]= a, 0
+. __temp__6
++ __temp__6, i, 1
+= i, __temp__6
+= i, 2
+. __temp__7
+<= __temp__7, i, sqrt_n
+: beginloop2
+. __temp__8
+i __temp__8, a, 0
+. __temp__9
++ __temp__9, i, i
+= j, __temp__9
+. __temp__10
+<= __temp__10, j, n
+: beginloop3
+[]= a, 1
+. __temp__11
++ __temp__11, j, i
+= j, __temp__11
+. __temp__12
++ __temp__12, i, 1
+= i, __temp__12
+= i, 2
+. __temp__13
+<= __temp__13, i, n
+: beginloop4
+. __temp__14
+i __temp__14, a, 0
+.> i
+. __temp__15
++ __temp__15, i, 1
+= i, __temp__15
 endfunc
 
